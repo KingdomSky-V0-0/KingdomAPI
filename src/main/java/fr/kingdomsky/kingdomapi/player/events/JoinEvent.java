@@ -30,21 +30,9 @@ public class JoinEvent implements Listener {
                 .collect(Collectors.toList())).isEmpty()) {
             Bukkit.broadcast(Component.text("je suis passé"));
 
-        if (KingdomAPI.getListPlayers().stream().filter(kingdomPlayer -> kingdomPlayer.getPlayer() == p).collect(Collectors.toList()).isEmpty()){
-
-            if(checkConfig(p)){
-
-            }
             KingdomPlayer kingdomPlayer = new KingdomPlayer(p);
             KingdomAPI.getListPlayers().add(kingdomPlayer);
             Bukkit.broadcast(Component.text(KingdomAPI.getListPlayers().toString()));
         }
     }
-
-    private boolean checkConfig(Player p) {
-
-
-        return false;
-    }
-
 }

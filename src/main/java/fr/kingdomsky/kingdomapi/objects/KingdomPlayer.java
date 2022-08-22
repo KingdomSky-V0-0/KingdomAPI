@@ -3,11 +3,15 @@ package fr.kingdomsky.kingdomapi.objects;
 import fr.kingdomsky.kingdomapi.KingdomAPI;
 
 import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+import net.kyori.adventure.text.Component;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
@@ -26,14 +30,15 @@ public class KingdomPlayer {
     private Jobs hunterJob;
     private Jobs farmerJob;
 
-    public KingdomPlayer(Player player) {
+    public KingdomPlayer(Player player) throws ParseException {
         this.player = player;
         this.playerUUID = player.getUniqueId();
 
         File playerFile = new File(KingdomAPI.path + "players/" + player.getUniqueId() + "/info.yml");
+
         YamlConfiguration playerConfig = YamlConfiguration.loadConfiguration(playerFile);
 
-        this.saveDate = (Date) playerConfig.get("Date-Save");
+        this.saveDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse(playerConfig.getString("Date-Save"));
         this.money = playerConfig.getDouble("statistiques.money");
         this.life = playerConfig.getDouble("statistiques.life");
         this.defense = playerConfig.getDouble("statistiques.defense");
@@ -183,9 +188,7 @@ public class KingdomPlayer {
     }
 
     public static KingdomPlayer getPlayerInList(UUID uuid) {
-        return (KingdomPlayer)((List)KingdomAPI.getListPlayers().stream().filter((kingdomPlayer) -> {
-            return kingdomPlayer.getPlayerUUID().equals(uuid);
-        }).collect(Collectors.toList())).get(0);
+        return KingdomAPI.getListPlayers().stream().filter((kingdomPlayer) -> kingdomPlayer.getPlayerUUID().equals(uuid)).collect(Collectors.toList()).get(0);
     }
 
     public String toString() {

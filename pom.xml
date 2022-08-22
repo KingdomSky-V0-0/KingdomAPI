@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fr.kingdomsky</groupId>
-    <artifactId>kingdomapi</artifactId>
-    <version>1.0.1</version>
+    <artifactId>KingdomAPI</artifactId>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>KingdomAPI</name>
@@ -24,8 +24,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
             <plugin>

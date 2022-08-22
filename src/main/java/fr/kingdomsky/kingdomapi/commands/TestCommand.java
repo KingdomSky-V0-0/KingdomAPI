@@ -1,6 +1,7 @@
 package fr.kingdomsky.kingdomapi.commands;
 
 import fr.kingdomsky.kingdomapi.KingdomAPI;
+import fr.kingdomsky.kingdomapi.objects.KingdomPlayer;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -15,9 +16,7 @@ public class TestCommand implements CommandExecutor {
 
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (sender instanceof Player) {
-            KingdomAPI.getListPlayers().forEach((kingdomPlayer) -> {
-                Bukkit.broadcast(Component.text(kingdomPlayer.toString()));
-            });
+            Bukkit.broadcast(Component.text(KingdomPlayer.getPlayerInList(((Player) sender).getUniqueId()).toString()));
         }
 
         return false;

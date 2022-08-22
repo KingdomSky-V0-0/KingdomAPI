@@ -6,6 +6,8 @@ import org.bukkit.entity.Player;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -17,11 +19,12 @@ public class PlayerConfig {
         YamlConfiguration playerConfig = YamlConfiguration.loadConfiguration(playerFile);
 
         if (!playerFile.exists()) {
+            Files.createDirectory(Path.of(KingdomAPI.path + "players/" + player.getUniqueId() + "/"));
             playerFile.createNewFile();
 
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-            playerConfig.set("Date-Save", dtf.format(LocalDateTime.now()));
-            playerConfig.set("UUID", player.getUniqueId());
+            playerConfig.set("Date-Save", dtf.format(LocalDateTime.now()).toString());
+            playerConfig.set("UUID", player.getUniqueId().toString());
 
             playerConfig.set("statistiques.money", 0);
             playerConfig.set("statistiques.life", 20);

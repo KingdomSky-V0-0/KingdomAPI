@@ -188,6 +188,8 @@ public class KingdomPlayer {
     }
 
     public static KingdomPlayer getPlayerInList(UUID uuid) {
+        Bukkit.broadcast(Component.text(uuid.toString()));
+        Bukkit.broadcast(Component.text(KingdomAPI.getListPlayers().toString()));
         return KingdomAPI.getListPlayers().stream().filter((kingdomPlayer) -> kingdomPlayer.getPlayerUUID().equals(uuid)).collect(Collectors.toList()).get(0);
     }
 

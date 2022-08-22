@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fr.kingdomsky</groupId>
-    <artifactId>KingdomAPI</artifactId>
+    <artifactId>kingdomapi</artifactId>
     <version>1.0.2</version>
     <packaging>jar</packaging>
 

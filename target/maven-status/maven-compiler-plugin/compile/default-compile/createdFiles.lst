@@ -1,6 +1,5 @@
 fr\kingdomsky\kingdomapi\player\config\PlayerConfig.class
 fr\kingdomsky\kingdomapi\objects\Jobs.class
-fr\kingdomsky\kingdomapi\objects\Jobs.class
 fr\kingdomsky\kingdomapi\KingdomAPI.class
 fr\kingdomsky\kingdomapi\objects\KingdomPlayer.class
 fr\kingdomsky\kingdomapi\utils\ecoUtil.class

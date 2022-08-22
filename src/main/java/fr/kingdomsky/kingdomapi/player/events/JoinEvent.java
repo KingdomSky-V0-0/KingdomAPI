@@ -17,9 +17,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
+import java.util.stream.Collectors;
+
 public class JoinEvent implements Listener {
-    public JoinEvent() {
-    }
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) throws IOException, ParseException {
@@ -30,8 +30,11 @@ public class JoinEvent implements Listener {
                 .collect(Collectors.toList())).isEmpty()) {
             Bukkit.broadcast(Component.text("je suis passé"));
 
-            PlayerConfig.createLoadConfigPlayer(p);
+        if (KingdomAPI.getListPlayers().stream().filter(kingdomPlayer -> kingdomPlayer.getPlayer() == p).collect(Collectors.toList()).isEmpty()){
 
+            if(checkConfig(p)){
+
+            }
             KingdomPlayer kingdomPlayer = new KingdomPlayer(p);
             KingdomAPI.getListPlayers().add(kingdomPlayer);
             Bukkit.broadcast(Component.text(KingdomAPI.getListPlayers().toString()));
@@ -39,6 +42,9 @@ public class JoinEvent implements Listener {
     }
 
     private boolean checkConfig(Player p) {
+
+
         return false;
     }
+
 }

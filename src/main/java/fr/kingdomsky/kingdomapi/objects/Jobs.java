@@ -1,9 +1,21 @@
 package fr.kingdomsky.kingdomapi.objects;
 
 public class Jobs {
+    /** Qu'est-ce qu'un job ?
+     * Un métier est un event qui permet de gagné de l'argent ou d'avoir des atouts.
+     * Qu'elle est le but d'un métier ?
+     * Les atouts, l'argent
+     * Objets:
+     * Nom du métier
+     * Expérience requise
+     * Level actuelle
+     * Boost actuelle (ex: x2.5)*/
+
     private String name;
+    // XP/Level actuelle du job
     private Double xp;
     private int level;
+    // XP requis
     private Double xpRequired;
     private Double boost;
 
@@ -16,7 +28,7 @@ public class Jobs {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -24,7 +36,7 @@ public class Jobs {
     }
 
     public Double getXp() {
-        return this.xp;
+        return xp;
     }
 
     public void setXp(Double xp) {
@@ -32,7 +44,7 @@ public class Jobs {
     }
 
     public int getLevel() {
-        return this.level;
+        return level;
     }
 
     public void setLevel(int level) {
@@ -40,7 +52,7 @@ public class Jobs {
     }
 
     public Double getXpRequired() {
-        return this.xpRequired;
+        return xpRequired;
     }
 
     public void setXpRequired(Double xpRequired) {
@@ -48,7 +60,7 @@ public class Jobs {
     }
 
     public Double getBoost() {
-        return this.boost;
+        return boost;
     }
 
     public void setBoost(Double boost) {

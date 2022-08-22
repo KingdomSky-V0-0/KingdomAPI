@@ -2,9 +2,19 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="github" />
+      <option name="name" value="github" />
+      <option name="url" value="https://maven.pkg.github.com/KingdomSky-V1-0/KingdomAPI" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="github" />
+      <option name="name" value="github" />
+      <option name="url" value="https://maven.pkg.github.com/kingdomsky-v1-0/kingdomapi" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="jitpack.io" />
@@ -29,12 +39,7 @@
     <remote-repository>
       <option name="id" value="github" />
       <option name="name" value="github" />
-      <option name="url" value="https://maven.pkg.github.com/KingdomSky/KingdomAPI" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="jboss.community" />
-      <option name="name" value="JBoss Community repository" />
-      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+      <option name="url" value="https://maven.pkg.github.com/MegaCretin/KingdomSky-V1-0/KingdomAPI" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -45,6 +50,31 @@
       <option name="id" value="github" />
       <option name="name" value="GitHub KingdomSky-V1-0 Apache Maven Packages" />
       <option name="url" value="https://maven.pkg.github.com/kingdomsky-v1-0/kingdomapi" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="github" />
+      <option name="name" value="github" />
+      <option name="url" value="https://maven.pkg.github.com/OWNER/REPOSITORY" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="github" />
+      <option name="name" value="github" />
+      <option name="url" value="https://maven.pkg.github.com/KingdomSky/KingdomAPI" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="github" />
+      <option name="name" value="GitHub MegaCretin Apache Maven Packages" />
+      <option name="url" value="https://maven.pkg.github.com/kingdomsky-v1-0/kingdomapi" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="github" />
+      <option name="name" value="github" />
+      <option name="url" value="https://maven.pkg.github.com/MegaCretin/REPOSITORY" />
     </remote-repository>
   </component>
 </project>

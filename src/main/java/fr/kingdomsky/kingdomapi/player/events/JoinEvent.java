@@ -24,15 +24,15 @@ public class JoinEvent implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) throws IOException, ParseException {
         Player p = event.getPlayer();
-        if (((List) KingdomAPI.getListPlayers()
+        if (((List) KingdomAPI.listPlayers
                 .stream()
                 .filter((kingdomPlayerx) -> kingdomPlayerx.getPlayer() == p)
                 .collect(Collectors.toList())).isEmpty()) {
             Bukkit.broadcast(Component.text("je suis passé"));
 
             KingdomPlayer kingdomPlayer = new KingdomPlayer(p);
-            KingdomAPI.getListPlayers().add(kingdomPlayer);
-            Bukkit.broadcast(Component.text(KingdomAPI.getListPlayers().toString()));
+            KingdomAPI.listPlayers.add(kingdomPlayer);
+            Bukkit.broadcast(Component.text(KingdomAPI.listPlayers.toString()));
         }
     }
 }

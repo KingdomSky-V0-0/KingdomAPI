@@ -16,10 +16,10 @@ public class LeaveEvent implements Listener {
 
         Player p = event.getPlayer();
 
-        if(!KingdomAPI.getListPlayers().stream().filter(kingdomPlayer -> kingdomPlayer.getPlayerUUID().equals(p.getUniqueId())).collect(Collectors.toList()).isEmpty()) {
+        if(!KingdomAPI.listPlayers.stream().filter(kingdomPlayer -> kingdomPlayer.getPlayerUUID().equals(p.getUniqueId())).collect(Collectors.toList()).isEmpty()) {
 
-            KingdomPlayer kingdomPlayer = KingdomAPI.getListPlayers().stream().filter(kPlayer -> kPlayer.getPlayerUUID().equals(p.getUniqueId())).collect(Collectors.toList()).get(0);
-            KingdomAPI.getListPlayers().remove(kingdomPlayer);
+            KingdomPlayer kingdomPlayer = KingdomAPI.listPlayers.stream().filter(kPlayer -> kPlayer.getPlayerUUID().equals(p.getUniqueId())).collect(Collectors.toList()).get(0);
+            KingdomAPI.listPlayers.remove(kingdomPlayer);
         }
 
     }

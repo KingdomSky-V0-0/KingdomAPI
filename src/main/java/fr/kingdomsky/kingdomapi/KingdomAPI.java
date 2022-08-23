@@ -19,12 +19,11 @@ public class KingdomAPI extends JavaPlugin {
 
     private static KingdomAPI instance;
     public static String path = "plugins/KingdomAPI/";
-    private static List<KingdomPlayer> listPlayers;
+    public static List<KingdomPlayer> listPlayers = new ArrayList<>();;
 
     @Override
     public void onEnable() {
         instance = this;
-        listPlayers = new ArrayList<>();
 
         // Event Player
         Bukkit.getPluginManager().registerEvents(new JoinEvent(), this);
@@ -42,10 +41,6 @@ public class KingdomAPI extends JavaPlugin {
 
     public static KingdomAPI getInstance() {
         return instance;
-    }
-
-    public static List<KingdomPlayer> getListPlayers() {
-        return listPlayers;
     }
 }
 

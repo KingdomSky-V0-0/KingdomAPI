@@ -19,6 +19,8 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 import java.util.stream.Collectors;
 
+import static fr.kingdomsky.kingdomapi.player.config.PlayerConfig.createLoadConfigPlayer;
+
 public class JoinEvent implements Listener {
 
     @EventHandler
@@ -30,6 +32,7 @@ public class JoinEvent implements Listener {
                 .collect(Collectors.toList())).isEmpty()) {
             Bukkit.broadcast(Component.text("je suis passé"));
 
+            createLoadConfigPlayer(p);
             KingdomPlayer kingdomPlayer = new KingdomPlayer(p);
             KingdomAPI.listPlayers.add(kingdomPlayer);
             Bukkit.broadcast(Component.text(KingdomAPI.listPlayers.toString()));

@@ -1,0 +1,8 @@
+name: KingdomAPI
+main: fr.kingdomsky.kingdomapi.KingdomAPI
+version: 1.0
+author: MegaCretin, Herllox
+api-version: 1.19
+commands:
+  test:
+    description: test command

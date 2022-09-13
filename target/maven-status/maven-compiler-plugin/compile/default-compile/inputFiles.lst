@@ -1,2 +1,8 @@
-E:\KingdomSky\plugin\KingdomAPI\src\main\java\fr\kingdomsky\kingdomapi\KingdomAPI.java
-E:\KingdomSky\plugin\KingdomAPI\src\main\java\fr\kingdomsky\kingdomapi\player\classe\Player.java
+C:\Users\arthu\IdeaProjects\KingdomAPI\src\main\java\fr\kingdomsky\kingdomapi\player\config\PlayerConfig.java
+C:\Users\arthu\IdeaProjects\KingdomAPI\src\main\java\fr\kingdomsky\kingdomapi\KingdomAPI.java
+C:\Users\arthu\IdeaProjects\KingdomAPI\src\main\java\fr\kingdomsky\kingdomapi\player\events\LeaveEvent.java
+C:\Users\arthu\IdeaProjects\KingdomAPI\src\main\java\fr\kingdomsky\kingdomapi\objects\Jobs.java
+C:\Users\arthu\IdeaProjects\KingdomAPI\src\main\java\fr\kingdomsky\kingdomapi\commands\TestCommand.java
+C:\Users\arthu\IdeaProjects\KingdomAPI\src\main\java\fr\kingdomsky\kingdomapi\objects\KingdomPlayer.java
+C:\Users\arthu\IdeaProjects\KingdomAPI\src\main\java\fr\kingdomsky\kingdomapi\utils\ecoUtil.java
+C:\Users\arthu\IdeaProjects\KingdomAPI\src\main\java\fr\kingdomsky\kingdomapi\player\events\JoinEvent.java
